@@ -17,12 +17,11 @@
                 </tbody>
             </table>
         </div>
-        <div
-            class="flex flex-row items-center justify-between w-full h-full max-w-7xl p-3 gap-4 rounded-b-2xl bg-sky-300">
+        <TableFooter>
             <AggregateDistanceDriven :items="sortedItems" />
             <AggregateTimeDriven :items="sortedItems" />
             <AggregateTonnage :items="sortedItems" />
-        </div>
+        </TableFooter>
     </div>
 </template>
 <script setup>
@@ -38,10 +37,7 @@
     import AggregateDistanceDriven from './AggregateDistanceDriven.vue'
     import AggregateTonnage from './AggregateTonnage.vue';
     import AggregateTimeDriven from './AggregateTimeDriven.vue';
-    import DriveTimeCol from './DriveTimeCol.vue';
-    import StatusCol from './StatusCol.vue';
-    import LastDrivenCol from './LastDrivenCol.vue';
-    import UsageCol from './UsageCol.vue';
+    import TableFooter from '@/Components/DataTable/TableFooter.vue';
 
     const headers = ref([
         { text: 'Registration Number', value: 'registration_number' },

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.standard-table-data {
+    @apply p-4 border border-gray-200;
+}
+
+.standard-text-color {
+    @apply text-gray-900;
+}
